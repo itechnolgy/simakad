@@ -15,7 +15,7 @@ public class ThymeleafConfig {
     @Bean
     public ServletContextTemplateResolver templateResolver() {
         ServletContextTemplateResolver resolver = new ServletContextTemplateResolver();
-        resolver.setPrefix("/pages/");
+        resolver.setPrefix("/WEB-INF/pages/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML5");
         resolver.setCacheable(false);

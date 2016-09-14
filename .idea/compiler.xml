@@ -18,5 +18,13 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CMS_main" target="1.8" />
+      <module name="CMS_test" target="1.8" />
+      <module name="Dao_main" target="1.5" />
+      <module name="Dao_test" target="1.5" />
+      <module name="Simakad_main" target="1.8" />
+      <module name="Simakad_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

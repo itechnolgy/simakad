@@ -32,26 +32,57 @@
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body class="page-header-fixed page-sidebar-closed-hide-logo">
-<!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
-    <!-- BEGIN HEADER INNER -->
-    <div class="page-header-inner">
-        <!-- BEGIN LOGO -->
-        <div class="page-logo">
-            <a href="/" th:href="@{/}">
-                <img src="../../assets/admin/layout/img/logo-light.png" alt="logo" class="logo-default"
-                     th:src="@{assets/admin/layout/img/logo-light.png}"/>
-            </a>
-            <div class="menu-toggler sidebar-toggler hide"></div>
+<div th:replace="layout/header"></div>
+<div class="clearfix"></div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <div th:replace="layout/sidebar"></div>
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <!-- BEGIN PAGE HEAD -->
+            <div class="page-head">
+                <!-- BEGIN PAGE TITLE -->
+                <div class="page-title">
+                    <h1>Blank Page</h1>
+                </div>
+                <!-- END PAGE TITLE -->
+                <!-- BEGIN PAGE TOOLBAR -->
+                <div class="page-toolbar">
+                </div>
+                <!-- END PAGE TOOLBAR -->
+            </div>
+            <!-- END PAGE HEAD -->
+            <!-- BEGIN PAGE BREADCRUMB -->
+            <ul class="page-breadcrumb breadcrumb">
+                <li>
+                    <a href="">Home</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <a href="#">Page Layouts</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <a href="#">Blank Page</a>
+                </li>
+            </ul>
+            <!-- END PAGE BREADCRUMB -->
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    Page content goes here
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
         </div>
-        <!-- END LOGO -->
-        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
-        <!-- END RESPONSIVE MENU TOGGLER -->
     </div>
-    <!-- END HEADER INNER -->
+    <!-- END CONTENT -->
 </div>
-<!-- END HEADER -->
+<!-- END CONTAINER -->
+<div th:replace="layout/footer"></div>
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>

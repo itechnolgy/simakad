@@ -25,11 +25,12 @@ public class TestController {
         student.setName("kovan");
         student.setAddress("cengkareng");
         model.addAttribute(student);
-        return "layout/nosidebar";
+        return "layout/auth/master";
     }
 
     @RequestMapping(value = "")
     public String index(Model model) {
-        return "layout/master";
+        model.addAttribute("view", "auth/login");
+        return "layout/auth/master";
     }
 }

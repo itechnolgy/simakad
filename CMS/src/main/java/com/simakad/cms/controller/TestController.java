@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,6 +22,8 @@ This is just for example !
 public class TestController {
     @RequestMapping(value = "/test")
     public String cetak(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("auth/login");
         Student student = new Student();
         student.setName("kovan");
         student.setAddress("cengkareng");
@@ -42,6 +45,12 @@ public class TestController {
     @RequestMapping(value = "forgot")
     public String forgot(Model model) {
         model.addAttribute("view", "auth/forgot");
+        return "layout/auth/master";
+    }
+
+    @RequestMapping(value = "register")
+    public String register(Model model) {
+        model.addAttribute("view", "auth/register");
         return "layout/auth/master";
     }
 }

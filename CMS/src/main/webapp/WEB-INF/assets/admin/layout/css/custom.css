@@ -3,3 +3,14 @@
 .no-sidebar {
     margin-left: 0 !important;
 }
+
+.register-divider {
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-top: 1px solid #CCCCCC;
+}
+
+.date-picker {
+    background-color: #FFFFFF !important;
+    cursor: text !important;
+}

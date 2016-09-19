@@ -30,7 +30,18 @@ public class TestController {
 
     @RequestMapping(value = "")
     public String index(Model model) {
+        return "layout/default/master";
+    }
+
+    @RequestMapping(value = "login")
+    public String login(Model model) {
         model.addAttribute("view", "auth/login");
+        return "layout/auth/master";
+    }
+
+    @RequestMapping(value = "forgot")
+    public String forgot(Model model) {
+        model.addAttribute("view", "auth/forgot");
         return "layout/auth/master";
     }
 }

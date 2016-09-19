@@ -15,7 +15,7 @@
         th:src="@{assets/admin/pages/scripts/auth.js}"></script>
 <script th:inline="javascript">
     $(document).ready(function() {
-        AuthPage.login();
+        AuthPage.forgotPassword();
     });
 </script>
 </body>
@@ -30,7 +30,8 @@
     </div>
     <div class="portlet light">
         <div class="portlet-body">
-            <form id="login-form" class="form" method="post" action="" th:action="@{'/'}">
+            <p>Enter your e-mail address below to reset your password.</p>
+            <form id="forgot-form" class="form" method="post" action="" th:action="@{'/'}">
                 <div class="form-body">
                     <!-- /* TODO: display-hide will be appear when error message is not exist */ -->
                     <div th:class="|alert alert-danger display-hide|">
@@ -38,24 +39,17 @@
                         <span>This is error message.</span>
                     </div>
                     <div class="form-group">
-                        <label for="username" class="visible-ie8 visible-ie9">Username</label>
+                        <label for="email" class="visible-ie8 visible-ie9">Username</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Username" id="username" name="username" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="visible-ie8 visible-ie9">Password</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input type="password" class="form-control" placeholder="Password" id="password" name="password" />
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input type="text" class="form-control" placeholder="Email" id="email" name="email" />
                         </div>
                     </div>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn blue pull-right">Login <i class="icon-arrow-right"></i></button>
+                    <button type="submit" class="btn blue pull-right">Submit <i class="icon-arrow-right"></i></button>
                     <div>
-                        <a href="" th:href="@{/forgot}">Forgot Password</a> | <a href="" th:href="@{/register}">Registration</a>
+                        <a href="" th:href="@{/login}">Back to Login</a>
                     </div>
                 </div>
             </form>

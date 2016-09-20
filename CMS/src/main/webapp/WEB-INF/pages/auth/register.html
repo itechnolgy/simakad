@@ -9,6 +9,8 @@
 <body th:fragment="jsPlugins" th:remove="tag">
 <script type="text/javascript" src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"
         th:src="@{assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js}"></script>
+<script type="text/javascript" src="../../assets/global/plugins/bootstrap-daterangepicker/moment.min.js"
+        th:src="@{assets/global/plugins/bootstrap-daterangepicker/moment.min.js}"></script>
 <script src="../../assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"
         th:src="@{assets/global/plugins/jquery-validation/js/jquery.validate.min.js}"></script>
 </body>
@@ -33,6 +35,11 @@
         <h4>Portal</h4>
     </div>
     <div class="portlet light">
+        <div class="portlet-title">
+            <div class="caption">
+                <span class="caption-subject bold uppercase"> Registration</span>
+            </div>
+        </div>
         <div class="portlet-body">
             <form id="register-form" class="form" method="post" action="" th:action="@{'/'}">
                 <div class="form-body">

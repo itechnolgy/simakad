@@ -57,13 +57,19 @@ var AuthPage = function() {
     };
 
     var initDatePicker = function() {
+        var startDate = moment().month(0).date(1).year(1900).format("DD MMMM YYYY");
+        var endDate = moment().format("DD MMMM YYYY");
+
         $('.date-picker').datepicker({
-            autoclose: true
+            autoclose: true,
+            startDate: startDate,
+            endDate: endDate,
+            format: "dd MM yyyy"
         });
     };
 
     var handleRegister = function() {
-        $("#forgot-form").validate({
+        $("#register-form").validate({
             errorElement: 'span',
             errorClass: 'help-block',
             focusInvalid: false,
@@ -110,6 +116,13 @@ var AuthPage = function() {
             success: function(label) {
                 label.closest('.form-group').removeClass('has-error');
                 label.remove();
+            },
+            errorPlacement: function(error, element) {
+                if(element.attr("type") == "radio") {
+                    error.insertAfter(element.closest('.radio-list'))
+                } else {
+                    error.insertAfter(element);
+                }
             }
         });
     };
